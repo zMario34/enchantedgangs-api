@@ -1,4 +1,4 @@
-package me.zmario.enchantedgangs.api.objects;
+package me.zmario.enchantedgangs.api.commands;
 
 import org.bukkit.command.CommandSender;
 

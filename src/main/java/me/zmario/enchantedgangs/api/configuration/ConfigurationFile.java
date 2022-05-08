@@ -1,4 +1,4 @@
-package me.zmario.enchantedgangs.api.objects;
+package me.zmario.enchantedgangs.api.configuration;
 
 import com.google.common.collect.Lists;
 import lombok.Getter;
@@ -11,16 +11,16 @@ import java.io.IOException;
 import java.util.List;
 
 @Getter
-public class IConfigurationFile {
+public class ConfigurationFile {
     private final Plugin plugin;
     private final String path;
 
     private Configuration config;
     private final File file;
 
-    private static final List<IConfigurationFile> list = Lists.newArrayList();
+    private static final List<ConfigurationFile> list = Lists.newArrayList();
 
-    public IConfigurationFile(Plugin plugin, String path) {
+    public ConfigurationFile(Plugin plugin, String path) {
         this.plugin = plugin;
         this.path = path;
 
@@ -56,6 +56,6 @@ public class IConfigurationFile {
     }
 
     public static void reloadAll() {
-        list.forEach(IConfigurationFile::reload);
+        list.forEach(ConfigurationFile::reload);
     }
 }
