@@ -1,6 +1,6 @@
 package me.zmario.enchantedgangs.api.manager;
 
-import me.zmario.enchantedgangs.api.objects.IGang;
+import me.zmario.enchantedgangs.api.objects.Gang;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -9,17 +9,17 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface IManager {
+public interface IGangsManager {
 
     boolean exists(String gangName);
 
-    Optional<IGang> getPlayerGang(OfflinePlayer player);
+    Optional<Gang> getPlayerGang(OfflinePlayer player);
 
     boolean isInGang(OfflinePlayer player);
 
-    IGang getGang(String gang);
+    Gang getGang(String gang);
 
-    Optional<IGang> getGangOptional(String gang);
+    Optional<Gang> getGangOptional(String gang);
 
     boolean hasGangChat(OfflinePlayer player);
 

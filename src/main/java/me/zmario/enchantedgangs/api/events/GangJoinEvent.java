@@ -1,7 +1,7 @@
 package me.zmario.enchantedgangs.api.events;
 
 import lombok.Getter;
-import me.zmario.enchantedgangs.api.objects.IGang;
+import me.zmario.enchantedgangs.api.objects.Gang;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
@@ -13,9 +13,9 @@ public class GangJoinEvent extends Event {
 
     private final Player player;
     private final Player inviting;
-    private final IGang gang;
+    private final Gang gang;
 
-    public GangJoinEvent(Player player, Player inviting, IGang gang) {
+    public GangJoinEvent(Player player, Player inviting, Gang gang) {
         this.player = player;
         this.inviting = inviting;
         this.gang = gang;

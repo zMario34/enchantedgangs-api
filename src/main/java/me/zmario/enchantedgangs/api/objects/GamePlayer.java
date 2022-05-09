@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.UUID;
 
 @Data
-public class IGamePlayer {
+public class GamePlayer {
 
     private final UUID player;
     private String gangName;

@@ -1,7 +1,6 @@
 package me.zmario.enchantedgangs.api.objects;
 
 import lombok.Data;
-import me.zmario.enchantedgangs.api.GangsAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.inventory.Inventory;
@@ -10,7 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Data
-public class IGang {
+public class Gang {
 
     private final String name;
 
