@@ -1,4 +1,4 @@
-package me.zmario.enchantedgangs.api.configuration;
+package tech.zmario.enchantedgangs.api.configuration;
 
 import com.google.common.collect.Lists;
 import lombok.Getter;

@@ -1,6 +1,6 @@
-package me.zmario.enchantedgangs.api.manager;
+package tech.zmario.enchantedgangs.api.manager;
 
-import me.zmario.enchantedgangs.api.objects.Gang;
+import tech.zmario.enchantedgangs.api.objects.Gang;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -42,4 +42,8 @@ public interface IGangsManager {
     void updateGangChest(Inventory inventory, String gangName);
 
     void setGang(Player player, String gangName);
+
+    void depositMoney(String name, int amount);
+
+    void withdrawMoney(String name, int amount);
 }

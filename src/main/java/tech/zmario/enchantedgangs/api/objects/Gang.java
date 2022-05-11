@@ -1,4 +1,4 @@
-package me.zmario.enchantedgangs.api.objects;
+package tech.zmario.enchantedgangs.api.objects;
 
 import lombok.Data;
 import org.bukkit.Bukkit;
@@ -16,6 +16,8 @@ public class Gang {
     private UUID owner;
     private List<OfflinePlayer> members;
     private Inventory chest;
+
+    private double money;
 
     public void addMember(UUID uuid) {
         members.add(Bukkit.getOfflinePlayer(uuid));
