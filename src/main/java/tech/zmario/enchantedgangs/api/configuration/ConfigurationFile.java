@@ -29,6 +29,7 @@ public class ConfigurationFile {
             config = create();
         } catch (IOException e) {
             e.printStackTrace();
+            plugin.getLogger().severe("Failed to create configuration file: " + path);
         }
 
         list.add(this);

@@ -17,7 +17,7 @@ public class Gang {
     private List<OfflinePlayer> members;
     private Inventory chest;
 
-    private double money;
+    private double balance;
 
     public void addMember(UUID uuid) {
         members.add(Bukkit.getOfflinePlayer(uuid));
