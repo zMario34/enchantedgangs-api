@@ -1,11 +1,11 @@
 package tech.zmario.enchantedgangs.api.events;
 
 import lombok.Getter;
-import tech.zmario.enchantedgangs.api.objects.Gang;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+import tech.zmario.enchantedgangs.api.objects.Gang;
 
 @Getter
 public class GangPromoteEvent extends Event {
@@ -27,7 +27,7 @@ public class GangPromoteEvent extends Event {
         return handlers;
     }
 
-    public static HandlerList getHandlerList(){
+    public static HandlerList getHandlerList() {
         return handlers;
     }
 }

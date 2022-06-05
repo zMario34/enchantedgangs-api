@@ -1,10 +1,10 @@
 package tech.zmario.enchantedgangs.api.events;
 
 import lombok.Getter;
-import tech.zmario.enchantedgangs.api.objects.Gang;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+import tech.zmario.enchantedgangs.api.objects.Gang;
 
 @Getter
 public class GangChatEvent extends Event {
@@ -24,7 +24,7 @@ public class GangChatEvent extends Event {
         return handlers;
     }
 
-    public static HandlerList getHandlerList(){
+    public static HandlerList getHandlerList() {
         return handlers;
     }
 }

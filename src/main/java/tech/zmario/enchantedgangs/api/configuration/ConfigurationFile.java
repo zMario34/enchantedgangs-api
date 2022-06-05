@@ -12,6 +12,7 @@ import java.util.List;
 
 @Getter
 public class ConfigurationFile {
+
     private final Plugin plugin;
     private final String path;
 
@@ -25,6 +26,7 @@ public class ConfigurationFile {
         this.path = path;
 
         file = new File(plugin.getDataFolder(), path);
+
         try {
             config = create();
         } catch (IOException e) {
@@ -41,15 +43,6 @@ public class ConfigurationFile {
         }
 
         return YamlConfiguration.loadConfiguration(file);
-    }
-
-    public void recreate() {
-        file.delete();
-        try {
-            create();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public void reload() {

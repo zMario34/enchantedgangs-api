@@ -1,9 +1,9 @@
 package tech.zmario.enchantedgangs.api.manager;
 
-import tech.zmario.enchantedgangs.api.objects.Gang;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import tech.zmario.enchantedgangs.api.objects.Gang;
 
 import java.util.List;
 import java.util.Optional;

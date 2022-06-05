@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Data
-public class Gang {
+public class Gang implements Comparable<Gang> {
 
     private final String name;
 
@@ -29,5 +29,10 @@ public class Gang {
 
     public boolean isMember(UUID uuid) {
         return members.contains(Bukkit.getOfflinePlayer(uuid));
+    }
+
+    @Override
+    public int compareTo(Gang targetGang) {
+        return Integer.compare((int) balance, (int) targetGang.getBalance());
     }
 }
