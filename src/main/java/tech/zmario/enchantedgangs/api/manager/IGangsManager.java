@@ -29,6 +29,10 @@ public interface IGangsManager {
 
     void removeMember(String gang, OfflinePlayer player);
 
+    void addAlly(String gang, OfflinePlayer player);
+
+    void removeAlly(String gang, OfflinePlayer player);
+
     void openGangChest(Player player);
 
     boolean isOwner(UUID uuid);
