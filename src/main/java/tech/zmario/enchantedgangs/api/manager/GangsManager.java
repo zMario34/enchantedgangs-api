@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface IGangsManager {
+public interface GangsManager {
 
     boolean exists(String gangName);
 
