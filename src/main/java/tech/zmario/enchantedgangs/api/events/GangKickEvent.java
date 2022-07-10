@@ -1,6 +1,7 @@
 package tech.zmario.enchantedgangs.api.events;
 
 import lombok.Getter;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
@@ -12,10 +13,10 @@ public class GangKickEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
 
     private final Player player;
-    private final Player kicked;
+    private final OfflinePlayer kicked;
     private final Gang gang;
 
-    public GangKickEvent(Player player, Player kicked, Gang gang) {
+    public GangKickEvent(Player player, OfflinePlayer kicked, Gang gang) {
         this.player = player;
         this.kicked = kicked;
         this.gang = gang;
