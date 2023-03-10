@@ -2,6 +2,7 @@ package tech.zmario.enchantedgangs.api.configuration;
 
 import com.google.common.collect.Lists;
 import lombok.Getter;
+import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
@@ -15,7 +16,7 @@ public class ConfigurationFile {
     private final Plugin plugin;
     private final String path;
 
-    private YamlConfiguration config;
+    private Configuration config;
     private final File file;
 
     private static final List<ConfigurationFile> list = Lists.newArrayList();
@@ -36,7 +37,7 @@ public class ConfigurationFile {
         list.add(this);
     }
 
-    private YamlConfiguration create() throws IOException {
+    private Configuration create() throws IOException {
         if (!file.exists()) {
             plugin.saveResource(path, false);
         }
@@ -50,13 +51,5 @@ public class ConfigurationFile {
 
     public static void reloadAll() {
         list.forEach(ConfigurationFile::reload);
-    }
-
-    public void save() {
-        try {
-            config.save(file);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
     }
 }

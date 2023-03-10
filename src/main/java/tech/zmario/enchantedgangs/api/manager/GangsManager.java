@@ -37,7 +37,7 @@ public interface GangsManager {
 
     boolean isOwner(UUID uuid);
 
-    List<Player> getGangMembers(String gangName);
+    List<OfflinePlayer> getGangMembers(String gangName, boolean online);
 
     void setGangOwner(String gangName, OfflinePlayer target);
 
