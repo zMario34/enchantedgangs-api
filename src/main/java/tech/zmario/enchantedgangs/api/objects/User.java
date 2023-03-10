@@ -4,11 +4,13 @@ import lombok.Data;
 
 import java.util.UUID;
 
-@Data
-public class GamePlayer {
 
-    private final UUID player;
+@Data
+public class User {
+
+    private final UUID uuid;
+
     private String gangName;
-    private boolean gangChatEnabled = false;
+    private boolean gangChatEnabled;
 
 }

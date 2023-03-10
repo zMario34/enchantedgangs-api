@@ -1,53 +1,30 @@
 package tech.zmario.enchantedgangs.api.objects;
 
-import lombok.Data;
-import org.bukkit.Bukkit;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.inventory.Inventory;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
-@Data
-public class Gang {
+public interface Gang {
+    String getName();
 
-    private final String name;
+    @NotNull
+    UUID getOwner();
 
-    private UUID owner;
-    private List<OfflinePlayer> members;
-    private List<OfflinePlayer> allies = new ArrayList<>();
+    void setOwner(UUID paramUUID);
 
-    private Inventory chest;
+    Map<UUID, Integer> getMembers();
 
-    private double balance;
-    private int kills;
+    Inventory getChest();
 
-    public void addMember(UUID uuid) {
-        members.add(Bukkit.getOfflinePlayer(uuid));
-    }
+    void setChest(Inventory paramInventory);
 
-    public void removeMember(UUID uuid) {
-        members.remove(Bukkit.getOfflinePlayer(uuid));
-    }
+    int getKills();
 
-    public boolean isMember(UUID uuid) {
-        return members.contains(Bukkit.getOfflinePlayer(uuid));
-    }
+    void setKills(int paramInt);
 
-    public void addAlly(UUID uuid) {
-        allies.add(Bukkit.getOfflinePlayer(uuid));
-    }
+    double getBalance();
 
-    public void removeAlly(UUID uuid) {
-        allies.remove(Bukkit.getOfflinePlayer(uuid));
-    }
-
-    public boolean isAlly(UUID uuid) {
-        return allies.contains(Bukkit.getOfflinePlayer(uuid));
-    }
-
-    public void increaseKills() {
-        kills += 1;
-    }
+    void setBalance(double paramDouble);
 }
